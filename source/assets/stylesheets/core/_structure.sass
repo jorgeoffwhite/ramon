@@ -1,12 +1,28 @@
 // =============================================================================
+// PLACEHOLDERS
+// ============
+
+%table
+    content: " "
+    display: table
+
+
+// =============================================================================
 // MIXINS
 // ======
 
-=row($maxWidth)
-    margin: 0 auto
+=row($maxWidth, $width, $margin)
     max-width: $maxWidth
-    width: 100%
+    width: $width
+    margin: $margin
 
+=sidePadding($right, $left)
+    padding-right: $right
+    padding-left: $left
+
+=sideMargin($right, $left)
+    margin-right: $right
+    margin-left: $left
 
 
 // =============================================================================
@@ -14,48 +30,98 @@
 // ====
 
 .row
-    +row(1366px)
+    +row(1366px, 100%, 0 auto)
 
     &:before,
     &:after
-        content: " "
-        display: table
+        @extend %table
 
     &:after
         clear: both
 
     &.collapse > .column,
     &.collapse > .columns
-        padding-right: 0
-        padding-left: 0
+        +sidePadding(0, 0)
 
     &.collapse
         .row
-            margin-right: 0
-            margin-left: 0
+            +sideMargin(0, 0)
 
     .row
-        margin: 0 -15px
-        max-width: none
-        width: auto
+        +row(none, auto, 0 -15px)
 
         &:before,
         &:after
-            content: " "
-            display: table
+            @extend %table
 
         &:after
             clear: both
 
         &.collapse
-            margin: 0 auto
-            max-width: none
-            width: auto
+            +row(none, auto, 0 auto)
 
             &:before,
             &:after
-                content: " "
-                display: table
+                @extend %table
 
             &:after
                 clear: both
+
+
+// =============================================================================
+// .column, .columns
+// =================
+
+.column,
+.columns
+    +sidePadding(15px, 15px)
+    width: 100%
+    float: left
+
+.column + .column:last-child,
+.columns + .column:last-child, 
+.column + .columns:last-child,
+.columns + .columns:last-child
+  float: right
+
+.column + .column.end,
+.columns + .column.end, 
+.column + .columns.end,
+.columns + .columns.end
+  float: left
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
