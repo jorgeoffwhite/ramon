@@ -1,0 +1,61 @@
+// =============================================================================
+// MIXINS
+// ======
+
+=row($maxWidth)
+    margin: 0 auto
+    max-width: $maxWidth
+    width: 100%
+
+
+
+// =============================================================================
+// .row
+// ====
+
+.row
+    +row(1366px)
+
+    &:before,
+    &:after
+        content: " "
+        display: table
+
+    &:after
+        clear: both
+
+    &.collapse > .column,
+    &.collapse > .columns
+        padding-right: 0
+        padding-left: 0
+
+    &.collapse
+        .row
+            margin-right: 0
+            margin-left: 0
+
+    .row
+        margin: 0 -15px
+        max-width: none
+        width: auto
+
+        &:before,
+        &:after
+            content: " "
+            display: table
+
+        &:after
+            clear: both
+
+        &.collapse
+            margin: 0 auto
+            max-width: none
+            width: auto
+
+            &:before,
+            &:after
+                content: " "
+                display: table
+
+            &:after
+                clear: both
