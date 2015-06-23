@@ -9,6 +9,15 @@
     margin: 0 auto
     display: block
 
+=vertical-align
+    position: relative
+    top: 50%
+    -webkit-transform: translateY(-50%)
+    -moz-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    -o-transform: translateY(-50%)
+    transform: translateY(-50%)
+
 
 // =============================================================================
 // FLOATS & DISPLAY
@@ -37,3 +46,45 @@
 .antialiased
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
+
+
+// =============================================================================
+// SPRITE GENERATOR
+// ================
+
+=sprite-generator($normal, $hover, $focus)
+    background-position: $normal
+    &:hover
+        background-position: $hover
+    &:focus
+        background-position: $focus
+
+
+// =============================================================================
+// TRANSFORMS
+// ==========
+
+=transform($axis, $dimension)
+    -webkit-transform: translate#{$axis}$dimension
+    -moz-transform: translate#{$axis}$dimension
+    -ms-transform: translate#{$axis}$dimension
+    -o-transform: translate#{$axis}$dimension
+    transform: translate#{$axis}$dimension
+
+
+// =============================================================================
+// FIXED BACKGROUND
+// ================
+
+=fixed-bg($asset, $height: 100%, $position: 50% 50%)
+    background-image: asset-url('#{$asset}')
+    position: relative
+    height: $height
+    background-position: $position
+    background-repeat: no-repeat
+    background-attachment: fixed
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -ms-background-size: cover
+    -o-background-size: cover
+    background-size: cover
