@@ -5,14 +5,10 @@
 // font-weights
 // ------------
 
-$thin: 100
-$extra-light: 200
-$light: 300
-$regular: 400
-$medium: 500
-$bold: 700
-$heavy: 800 
-$black: 900
+$font-weight: (thin: 100, extra-light: 200, light: 300, regular: 400, medium: 500, bold: 700, heavy: 800, black: 900)
+
+=font-weight($weight)
+    font-weight: map-get($font-weight, $weight)
 
 
 // default typography
@@ -26,16 +22,16 @@ html
         font-size: 100%
 
 body
+    +font-weight(regular)
     font-size: 16px
     font-size: 1.6rem
     background-color: #E9E9E9
     color: #444444
     font-family: Helvetica, Arial, sans-serif
     font-style: normal
-    font-weight: $regular
 
 h1, h2, h3, h4, h5, h6
-    font-weight: $bold
+    +font-weight(bold)
     
 h1
     font-size: 36px
@@ -62,6 +58,6 @@ h6
     font-size: 1.6rem
 
 p
-    font-weight: $light
+    +font-weight(light)
     font-size: 16px
     font-size: 1.6rem
