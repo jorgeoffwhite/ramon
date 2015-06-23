@@ -1,9 +1,3 @@
-
-
-
-
-
-
 // =============================================================================
 // PLACEHOLDERS
 // ============
@@ -11,7 +5,6 @@
 %table
     content: " "
     display: table
-
 
 %columnDefault
     padding-left: 16px
@@ -263,6 +256,14 @@
     .pull-11
         +pull(91.66667%)
 
+=visibility($position, $height, $width, $overflow, $clip)
+    position: $position !important
+    height: $height
+    width: $width
+    overflow: $overflow
+    clip: $clip
+
+
 // =============================================================================
 // .row
 // ====
@@ -361,11 +362,1311 @@
     +pushNpull
 
 
+// =============================================================================
+// VISIBILITY
+// ==========
+
+@media only screen 
+    .show-for-phone-only,
+    .show-for-phone-up,
+    .show-for-phone,
+    .show-for-phone-down,
+    .hide-for-tablet-only,
+    .hide-for-tablet-up,
+    .hide-for-tablet,
+    .show-for-tablet-down,
+    .hide-for-laptop-only,
+    .hide-for-laptop-up,
+    .hide-for-laptop,
+    .show-for-laptop-down,
+    .hide-for-desktop-only,
+    .hide-for-desktop-up,
+    .hide-for-desktop,
+    .show-for-desktop-down,
+    .hide-for-hd-only,
+    .hide-for-hd-up,
+    .hide-for-hd,
+    .show-for-hd-down 
+        display: inherit !important
+
+    .hide-for-phone-only,
+    .hide-for-phone-up,
+    .hide-for-phone,
+    .hide-for-phone-down,
+    .show-for-tablet-only,
+    .show-for-tablet-up,
+    .show-for-tablet,
+    .hide-for-tablet-down,
+    .show-for-laptop-only,
+    .show-for-laptop-up,
+    .show-for-laptop,
+    .hide-for-laptop-down,
+    .show-for-desktop-only,
+    .show-for-desktop-up,
+    .show-for-desktop,
+    .hide-for-desktop-down,
+    .show-for-hd-only,
+    .show-for-hd-up,
+    .show-for-hd,
+    .hide-for-hd-down 
+        display: none !important
+
+    .visible-for-phone-only,
+    .visible-for-phone-up,
+    .visible-for-phone,
+    .visible-for-phone-down,
+    .hidden-for-tablet-only,
+    .hidden-for-tablet-up,
+    .hidden-for-tablet,
+    .visible-for-tablet-down,
+    .hidden-for-laptop-only,
+    .hidden-for-laptop-up,
+    .hidden-for-laptop,
+    .visible-for-laptop-down,
+    .hidden-for-desktop-only,
+    .hidden-for-desktop-up,
+    .hidden-for-desktop,
+    .visible-for-desktop-down,
+    .hidden-for-hd-only,
+    .hidden-for-hd-up,
+    .hidden-for-hd,
+    .visible-for-hd-down 
+        +visibility(static, auto, auto, visible, auto)
+
+    .hidden-for-phone-only,
+    .hidden-for-phone-up,
+    .hidden-for-phone,
+    .hidden-for-phone-down,
+    .visible-for-tablet-only,
+    .visible-for-tablet-up,
+    .visible-for-tablet,
+    .hidden-for-tablet-down,
+    .visible-for-laptop-only,
+    .visible-for-laptop-up,
+    .visible-for-laptop,
+    .hidden-for-laptop-down,
+    .visible-for-desktop-only,
+    .visible-for-desktop-up,
+    .visible-for-desktop,
+    .hidden-for-desktop-down,
+    .visible-for-hd-only,
+    .visible-for-hd-up,
+    .visible-for-hd,
+    .hidden-for-hd-down 
+        +visibility(absolute, 1px, 1px, hidden, rect(1px, 1px, 1px, 1px))
+
+    table 
+        &.show-for-phone-only,
+        &.show-for-phone-up,
+        &.show-for-phone,
+        &.show-for-phone-down,
+        &.hide-for-tablet-only,
+        &.hide-for-tablet-up,
+        &.hide-for-tablet,
+        &.show-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.hide-for-laptop-up,
+        &.hide-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table !important
+
+    thead 
+        &.show-for-phone-only,
+        &.show-for-phone-up,
+        &.show-for-phone,
+        &.show-for-phone-down,
+        &.hide-for-tablet-only,
+        &.hide-for-tablet-up,
+        &.hide-for-tablet,
+        &.show-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.hide-for-laptop-up,
+        &.hide-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-header-group !important
+
+    tbody 
+        &.show-for-phone-only,
+        &.show-for-phone-up,
+        &.show-for-phone,
+        &.show-for-phone-down,
+        &.hide-for-tablet-only,
+        &.hide-for-tablet-up,
+        &.hide-for-tablet,
+        &.show-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.hide-for-laptop-up,
+        &.hide-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-row-group !important
+
+    tr 
+        &.show-for-phone-only,
+        &.show-for-phone-up,
+        &.show-for-phone,
+        &.show-for-phone-down,
+        &.hide-for-tablet-only,
+        &.hide-for-tablet-up,
+        &.hide-for-tablet,
+        &.show-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.hide-for-laptop-up,
+        &.hide-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-row
+
+    th 
+        &.show-for-phone-only,
+        &.show-for-phone-up,
+        &.show-for-phone,
+        &.show-for-phone-down,
+        &.hide-for-tablet-only,
+        &.hide-for-tablet-up,
+        &.hide-for-tablet,
+        &.show-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.hide-for-laptop-up,
+        &.hide-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-cell !important
+
+    td 
+        &.show-for-phone-only,
+        &.show-for-phone-up,
+        &.show-for-phone,
+        &.show-for-phone-down,
+        &.hide-for-tablet-only,
+        &.hide-for-tablet-up,
+        &.hide-for-tablet,
+        &.show-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.hide-for-laptop-up,
+        &.hide-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-cell !important
+
+
+@media only screen and(min-width: 600px) 
+    .hide-for-phone-only,
+    .show-for-phone-up,
+    .hide-for-phone,
+    .hide-for-phone-down,
+    .show-for-tablet-only,
+    .show-for-tablet-up,
+    .show-for-tablet,
+    .show-for-tablet-down,
+    .hide-for-laptop-only,
+    .hide-for-laptop-up,
+    .hide-for-laptop,
+    .show-for-laptop-down,
+    .hide-for-desktop-only,
+    .hide-for-desktop-up,
+    .hide-for-desktop,
+    .show-for-desktop-down,
+    .hide-for-hd-only,
+    .hide-for-hd-up,
+    .hide-for-hd,
+    .show-for-hd-down 
+        display: inherit !important
+
+    .show-for-phone-only,
+    .hide-for-phone-up,
+    .show-for-phone,
+    .show-for-phone-down,
+    .hide-for-tablet-only,
+    .hide-for-tablet-up,
+    .hide-for-tablet,
+    .hide-for-tablet-down,
+    .show-for-laptop-only,
+    .show-for-laptop-up,
+    .show-for-laptop,
+    .hide-for-laptop-down,
+    .show-for-desktop-only,
+    .show-for-desktop-up,
+    .show-for-desktop,
+    .hide-for-desktop-down,
+    .show-for-hd-only,
+    .show-for-hd-up,
+    .show-for-hd,
+    .hide-for-hd-down 
+        display: none !important
+
+    .hidden-for-phone-only,
+    .visible-for-phone-up,
+    .hidden-for-phone,
+    .hidden-for-phone-down,
+    .visible-for-tablet-only,
+    .visible-for-tablet-up,
+    .visible-for-tablet,
+    .visible-for-tablet-down,
+    .hidden-for-laptop-only,
+    .hidden-for-laptop-up,
+    .hidden-for-laptop,
+    .visible-for-laptop-down,
+    .hidden-for-desktop-only,
+    .hidden-for-desktop-up,
+    .hidden-for-desktop,
+    .visible-for-desktop-down,
+    .hidden-for-hd-only,
+    .hidden-for-hd-up,
+    .hidden-for-hd,
+    .visible-for-hd-down
+        +visibility(static, auto, auto, visible, auto)
+
+    .visible-for-phone-only,
+    .hidden-for-phone-up,
+    .visible-for-phone,
+    .visible-for-phone-down,
+    .hidden-for-tablet-only,
+    .hidden-for-tablet-up,
+    .hidden-for-tablet,
+    .hidden-for-tablet-down,
+    .visible-for-laptop-only,
+    .visible-for-laptop-up,
+    .visible-for-laptop,
+    .hidden-for-laptop-down,
+    .visible-for-desktop-only,
+    .visible-for-desktop-up,
+    .visible-for-desktop,
+    .hidden-for-desktop-down,
+    .visible-for-hd-only,
+    .visible-for-hd-up,
+    .visible-for-hd,
+    .hidden-for-hd-down 
+        +visibility(absolute, 1px, 1px, hidden, rect(1px, 1px, 1px, 1px))
+
+    table 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.show-for-tablet-only,
+        &.show-for-tablet-up,
+        &.show-for-tablet,
+        &.show-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.hide-for-laptop-up,
+        &.hide-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table !important
+
+    thead 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.show-for-tablet-only,
+        &.show-for-tablet-up,
+        &.show-for-tablet,
+        &.show-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.hide-for-laptop-up,
+        &.hide-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-header-group !important
+
+    tbody 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.show-for-tablet-only,
+        &.show-for-tablet-up,
+        &.show-for-tablet,
+        &.show-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.hide-for-laptop-up,
+        &.hide-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-row-group !important
+
+    tr 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.show-for-tablet-only,
+        &.show-for-tablet-up,
+        &.show-for-tablet,
+        &.show-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.hide-for-laptop-up,
+        &.hide-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-row
+
+    th 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.show-for-tablet-only,
+        &.show-for-tablet-up,
+        &.show-for-tablet,
+        &.show-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.hide-for-laptop-up,
+        &.hide-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-cell !important
+
+    td 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.show-for-tablet-only,
+        &.show-for-tablet-up,
+        &.show-for-tablet,
+        &.show-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.hide-for-laptop-up,
+        &.hide-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-cell !important
+
+
+@media only screen and(min-width: 1024px) 
+    .hide-for-phone-only,
+    .show-for-phone-up,
+    .hide-for-phone,
+    .hide-for-phone-down,
+    .hide-for-tablet-only,
+    .show-for-tablet-up,
+    .hide-for-tablet,
+    .hide-for-tablet-down,
+    .show-for-laptop-only,
+    .show-for-laptop-up,
+    .show-for-laptop,
+    .show-for-laptop-down,
+    .hide-for-desktop-only,
+    .hide-for-desktop-up,
+    .hide-for-desktop,
+    .show-for-desktop-down,
+    .hide-for-hd-only,
+    .hide-for-hd-up,
+    .hide-for-hd,
+    .show-for-hd-down 
+        display: inherit !important
+
+    .show-for-phone-only,
+    .hide-for-phone-up,
+    .show-for-phone,
+    .show-for-phone-down,
+    .show-for-tablet-only,
+    .hide-for-tablet-up,
+    .show-for-tablet,
+    .show-for-tablet-down,
+    .hide-for-laptop-only,
+    .hide-for-laptop-up,
+    .hide-for-laptop,
+    .hide-for-laptop-down,
+    .show-for-desktop-only,
+    .show-for-desktop-up,
+    .show-for-desktop,
+    .hide-for-desktop-down,
+    .show-for-hd-only,
+    .show-for-hd-up,
+    .show-for-hd,
+    .hide-for-hd-down 
+        display: none !important
+
+    .hidden-for-phone-only,
+    .visible-for-phone-up,
+    .hidden-for-phone,
+    .hidden-for-phone-down,
+    .hidden-for-tablet-only,
+    .visible-for-tablet-up,
+    .hidden-for-tablet,
+    .hidden-for-tablet-down,
+    .visible-for-laptop-only,
+    .visible-for-laptop-up,
+    .visible-for-laptop,
+    .visible-for-laptop-down,
+    .hidden-for-desktop-only,
+    .hidden-for-desktop-up,
+    .hidden-for-desktop,
+    .visible-for-desktop-down,
+    .hidden-for-hd-only,
+    .hidden-for-hd-up,
+    .hidden-for-hd,
+    .visible-for-hd-down
+        +visibility(static, auto, auto, visible, auto)
+    .visible-for-phone-only,
+    .hidden-for-phone-up,
+    .visible-for-phone,
+    .visible-for-phone-down,
+    .visible-for-tablet-only,
+    .hidden-for-tablet-up,
+    .visible-for-tablet,
+    .visible-for-tablet-down,
+    .hidden-for-laptop-only,
+    .hidden-for-laptop-up,
+    .hidden-for-laptop,
+    .hidden-for-laptop-down,
+    .visible-for-desktop-only,
+    .visible-for-desktop-up,
+    .visible-for-desktop,
+    .hidden-for-desktop-down,
+    .visible-for-hd-only,
+    .visible-for-hd-up,
+    .visible-for-hd,
+    .hidden-for-hd-down 
+        +visibility(absolute, 1px, 1px, hidden, rect(1px, 1px, 1px, 1px))
+
+    table 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.show-for-laptop-only,
+        &.show-for-laptop-up,
+        &.show-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table !important
+
+    thead 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.show-for-laptop-only,
+        &.show-for-laptop-up,
+        &.show-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-header-group !important
+
+    tbody 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.show-for-laptop-only,
+        &.show-for-laptop-up,
+        &.show-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-row-group !important
+
+    tr 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.show-for-laptop-only,
+        &.show-for-laptop-up,
+        &.show-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-row
+
+    th 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.show-for-laptop-only,
+        &.show-for-laptop-up,
+        &.show-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-cell !important
+
+    td 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.show-for-laptop-only,
+        &.show-for-laptop-up,
+        &.show-for-laptop,
+        &.show-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.hide-for-desktop-up,
+        &.hide-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-cell !important
 
 
 
+@media only screen and(min-width: 1440px) 
+    .hide-for-phone-only,
+    .show-for-phone-up,
+    .hide-for-phone,
+    .hide-for-phone-down,
+    .hide-for-tablet-only,
+    .show-for-tablet-up,
+    .hide-for-tablet,
+    .hide-for-tablet-down,
+    .hide-for-laptop-only,
+    .show-for-laptop-up,
+    .hide-for-laptop,
+    .hide-for-laptop-down,
+    .show-for-desktop-only,
+    .show-for-desktop-up,
+    .show-for-desktop,
+    .show-for-desktop-down,
+    .hide-for-hd-only,
+    .hide-for-hd-up,
+    .hide-for-hd,
+    .show-for-hd-down 
+        display: inherit !important
+
+    .show-for-phone-only,
+    .hide-for-phone-up,
+    .show-for-phone,
+    .show-for-phone-down,
+    .show-for-tablet-only,
+    .hide-for-tablet-up,
+    .show-for-tablet,
+    .show-for-tablet-down,
+    .show-for-laptop-only,
+    .hide-for-laptop-up,
+    .show-for-laptop,
+    .show-for-laptop-down,
+    .hide-for-desktop-only,
+    .hide-for-desktop-up,
+    .hide-for-desktop,
+    .hide-for-desktop-down,
+    .show-for-hd-only,
+    .show-for-hd-up,
+    .show-for-hd,
+    .hide-for-hd-down 
+        display: none !important
+
+    .hidden-for-phone-only,
+    .visible-for-phone-up,
+    .hidden-for-phone,
+    .hidden-for-phone-down,
+    .hidden-for-tablet-only,
+    .visible-for-tablet-up,
+    .hidden-for-tablet,
+    .hidden-for-tablet-down,
+    .hidden-for-laptop-only,
+    .visible-for-laptop-up,
+    .hidden-for-laptop,
+    .hidden-for-laptop-down,
+    .visible-for-desktop-only,
+    .visible-for-desktop-up,
+    .visible-for-desktop,
+    .visible-for-desktop-down,
+    .hidden-for-hd-only,
+    .hidden-for-hd-up,
+    .hidden-for-hd,
+    .visible-for-hd-down 
+        +visibility(static, auto, auto, visible, auto)
+
+    .visible-for-phone-only,
+    .hidden-for-phone-up,
+    .visible-for-phone,
+    .visible-for-phone-down,
+    .visible-for-tablet-only,
+    .hidden-for-tablet-up,
+    .visible-for-tablet,
+    .visible-for-tablet-down,
+    .visible-for-laptop-only,
+    .hidden-for-laptop-up,
+    .visible-for-laptop,
+    .visible-for-laptop-down,
+    .hidden-for-desktop-only,
+    .hidden-for-desktop-up,
+    .hidden-for-desktop,
+    .hidden-for-desktop-down,
+    .visible-for-hd-only,
+    .visible-for-hd-up,
+    .visible-for-hd,
+    .hidden-for-hd-down 
+        +visibility(absolute, 1px, 1px, hidden, rect(1px, 1px, 1px, 1px))
+
+    table 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.show-for-laptop-up,
+        &.hide-for-laptop,
+        &.hide-for-laptop-down,
+        &.show-for-desktop-only,
+        &.show-for-desktop-up,
+        &.show-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table !important
+
+    thead 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.show-for-laptop-up,
+        &.hide-for-laptop,
+        &.hide-for-laptop-down,
+        &.show-for-desktop-only,
+        &.show-for-desktop-up,
+        &.show-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-header-group !important
+
+    tbody 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.show-for-laptop-up,
+        &.hide-for-laptop,
+        &.hide-for-laptop-down,
+        &.show-for-desktop-only,
+        &.show-for-desktop-up,
+        &.show-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-row-group !important
+
+    tr 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.show-for-laptop-up,
+        &.hide-for-laptop,
+        &.hide-for-laptop-down,
+        &.show-for-desktop-only,
+        &.show-for-desktop-up,
+        &.show-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-row
+
+    th 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.show-for-laptop-up,
+        &.hide-for-laptop,
+        &.hide-for-laptop-down,
+        &.show-for-desktop-only,
+        &.show-for-desktop-up,
+        &.show-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-cell !important
+
+    td 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.show-for-laptop-up,
+        &.hide-for-laptop,
+        &.hide-for-laptop-down,
+        &.show-for-desktop-only,
+        &.show-for-desktop-up,
+        &.show-for-desktop,
+        &.show-for-desktop-down,
+        &.hide-for-hd-only,
+        &.hide-for-hd-up,
+        &.hide-for-hd,
+        &.show-for-hd-down 
+            display: table-cell !important
+
+
+@media only screen and(min-width: 1920px) 
+    .hide-for-phone-only,
+    .show-for-phone-up,
+    .hide-for-phone,
+    .hide-for-phone-down,
+    .hide-for-tablet-only,
+    .show-for-tablet-up,
+    .hide-for-tablet,
+    .hide-for-tablet-down,
+    .hide-for-laptop-only,
+    .show-for-laptop-up,
+    .hide-for-laptop,
+    .hide-for-laptop-down,
+    .hide-for-desktop-only,
+    .show-for-desktop-up,
+    .hide-for-desktop,
+    .hide-for-desktop-down,
+    .show-for-hd-only,
+    .show-for-hd-up,
+    .show-for-hd,
+    .show-for-hd-down 
+        display: inherit !important
+
+    .show-for-phone-only,
+    .hide-for-phone-up,
+    .show-for-phone,
+    .show-for-phone-down,
+    .show-for-tablet-only,
+    .hide-for-tablet-up,
+    .show-for-tablet,
+    .show-for-tablet-down,
+    .show-for-laptop-only,
+    .hide-for-laptop-up,
+    .show-for-laptop,
+    .show-for-laptop-down,
+    .show-for-desktop-only,
+    .hide-for-desktop-up,
+    .show-for-desktop,
+    .show-for-desktop-down,
+    .hide-for-hd-only,
+    .hide-for-hd-up,
+    .hide-for-hd,
+    .hide-for-hd-down 
+        display: none !important
+
+    .hidden-for-phone-only,
+    .visible-for-phone-up,
+    .hidden-for-phone,
+    .hidden-for-phone-down,
+    .hidden-for-tablet-only,
+    .visible-for-tablet-up,
+    .hidden-for-tablet,
+    .hidden-for-tablet-down,
+    .hidden-for-laptop-only,
+    .visible-for-laptop-up,
+    .hidden-for-laptop,
+    .hidden-for-laptop-down,
+    .hidden-for-desktop-only,
+    .visible-for-desktop-up,
+    .hidden-for-desktop,
+    .hidden-for-desktop-down,
+    .visible-for-hd-only,
+    .visible-for-hd-up,
+    .visible-for-hd,
+    .visible-for-hd-down 
+        +visibility(static, auto, auto, visible, auto)
+
+    .visible-for-phone-only,
+    .hidden-for-phone-up,
+    .visible-for-phone,
+    .visible-for-phone-down,
+    .visible-for-tablet-only,
+    .hidden-for-tablet-up,
+    .visible-for-tablet,
+    .visible-for-tablet-down,
+    .visible-for-laptop-only,
+    .hidden-for-laptop-up,
+    .visible-for-laptop,
+    .visible-for-laptop-down,
+    .visible-for-desktop-only,
+    .hidden-for-desktop-up,
+    .visible-for-desktop,
+    .visible-for-desktop-down,
+    .hidden-for-hd-only,
+    .hidden-for-hd-up,
+    .hidden-for-hd,
+    .hidden-for-hd-down 
+        +visibility(absolute, 1px, 1px, hidden, rect(1px, 1px, 1px, 1px))
+
+    table 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.show-for-laptop-up,
+        &.hide-for-laptop,
+        &.hide-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.show-for-desktop-up,
+        &.hide-for-desktop,
+        &.hide-for-desktop-down,
+        &.show-for-hd-only,
+        &.show-for-hd-up,
+        &.show-for-hd,
+        &.show-for-hd-down 
+            display: table !important
+
+    thead 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.show-for-laptop-up,
+        &.hide-for-laptop,
+        &.hide-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.show-for-desktop-up,
+        &.hide-for-desktop,
+        &.hide-for-desktop-down,
+        &.show-for-hd-only,
+        &.show-for-hd-up,
+        &.show-for-hd,
+        &.show-for-hd-down 
+            display: table-header-group !important
+
+    tbody 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.show-for-laptop-up,
+        &.hide-for-laptop,
+        &.hide-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.show-for-desktop-up,
+        &.hide-for-desktop,
+        &.hide-for-desktop-down,
+        &.show-for-hd-only,
+        &.show-for-hd-up,
+        &.show-for-hd,
+        &.show-for-hd-down 
+            display: table-row-group !important
+
+    tr 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.show-for-laptop-up,
+        &.hide-for-laptop,
+        &.hide-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.show-for-desktop-up,
+        &.hide-for-desktop,
+        &.hide-for-desktop-down,
+        &.show-for-hd-only,
+        &.show-for-hd-up,
+        &.show-for-hd,
+        &.show-for-hd-down 
+            display: table-row
+
+    th 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.show-for-laptop-up,
+        &.hide-for-laptop,
+        &.hide-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.show-for-desktop-up,
+        &.hide-for-desktop,
+        &.hide-for-desktop-down,
+        &.show-for-hd-only,
+        &.show-for-hd-up,
+        &.show-for-hd,
+        &.show-for-hd-down 
+            display: table-cell !important
+
+    td 
+        &.hide-for-phone-only,
+        &.show-for-phone-up,
+        &.hide-for-phone,
+        &.hide-for-phone-down,
+        &.hide-for-tablet-only,
+        &.show-for-tablet-up,
+        &.hide-for-tablet,
+        &.hide-for-tablet-down,
+        &.hide-for-laptop-only,
+        &.show-for-laptop-up,
+        &.hide-for-laptop,
+        &.hide-for-laptop-down,
+        &.hide-for-desktop-only,
+        &.show-for-desktop-up,
+        &.hide-for-desktop,
+        &.hide-for-desktop-down,
+        &.show-for-hd-only,
+        &.show-for-hd-up,
+        &.show-for-hd,
+        &.show-for-hd-down 
+            display: table-cell !important
+
+
+.show-for-landscape,
+.hide-for-portrait 
+    display: inherit !important
+
+.hide-for-landscape,
+.show-for-portrait 
+    display: none !important
+
+table 
+    &.hide-for-landscape,
+    &.show-for-portrait,
+    &.hide-for-touch 
+        display: table !important
+
+
+thead 
+    &.hide-for-landscape,
+    &.show-for-portrait,
+    &.hide-for-touch 
+        display: table-header-group !important
+
+tbody 
+    &.hide-for-landscape,
+    &.show-for-portrait,
+    &.hide-for-touch 
+        display: table-row-group !important
+
+
+tr 
+    &.hide-for-landscape,
+    &.show-for-portrait,
+    &.hide-for-touch 
+        display: table-row !important
+
+td 
+    &.hide-for-landscape,
+    &.show-for-portrait,
+    &.hide-for-touch 
+        display: table-cell !important
+
+th 
+    &.hide-for-landscape,
+    &.show-for-portrait,
+    &.hide-for-touch 
+        display: table-cell !important
+
+@media only screen and(orientation: landscape) 
+    .show-for-landscape,
+    .hide-for-portrait 
+        display: inherit !important
+
+    .hide-for-landscape,
+    .show-for-portrait 
+        display: none !important
+
+    table 
+        &.show-for-landscape,
+        &.hide-for-portrait 
+            display: table !important
+
+    thead 
+        &.show-for-landscape,
+        &.hide-for-portrait 
+            display: table-header-group !important
+
+    tbody 
+        &.show-for-landscape,
+        &.hide-for-portrait 
+            display: table-row-group !important
+
+    tr 
+        &.show-for-landscape,
+        &.hide-for-portrait 
+            display: table-row !important
+
+    td 
+        &.show-for-landscape,
+        &.hide-for-portrait 
+            display: table-cell !important
+
+    th 
+        &.show-for-landscape,
+        &.hide-for-portrait 
+            display: table-cell !important
 
 
 
+@media only screen and(orientation: portrait) 
+    .show-for-portrait,
+    .hide-for-landscape 
+        display: inherit !important
+
+    .hide-for-portrait,
+    .show-for-landscape 
+        display: none !important
+
+    table 
+        &.show-for-portrait,
+        &.hide-for-landscape 
+            display: table !important
+
+    thead 
+        &.show-for-portrait,
+        &.hide-for-landscape 
+            display: table-header-group !important
+
+    tbody 
+        &.show-for-portrait,
+        &.hide-for-landscape 
+            display: table-row-group !important
+
+    tr 
+        &.show-for-portrait,
+        &.hide-for-landscape 
+            display: table-row !important
+
+    td 
+        &.show-for-portrait,
+        &.hide-for-landscape 
+            display: table-cell !important
+
+    th 
+        &.show-for-portrait,
+        &.hide-for-landscape 
+            display: table-cell !important
 
 
+.show-for-touch 
+    display: none !important
+
+.hide-for-touch 
+    display: inherit !important
+
+.touch 
+    .show-for-touch 
+        display: inherit !important
+
+    .hide-for-touch 
+        display: none !important
+
+    table.show-for-touch 
+        display: table !important
+
+    thead.show-for-touch 
+        display: table-header-group !important
+
+    tbody.show-for-touch 
+        display: table-row-group !important
+
+    tr.show-for-touch 
+        display: table-row !important
+
+    td.show-for-touch,
+    th.show-for-touch 
+        display: table-cell !important
+
+.show-for-sr
+    +visibility(absolute, 1px, 1px, hidden, rect(1px, 1px, 1px, 1px))
+
+.show-on-focus 
+    +visibility(absolute, 1px, 1px, hidden, rect(1px, 1px, 1px, 1px))
+    &:focus, 
+    &:active
+        +visibility(static, auto, auto, visible, auto)
